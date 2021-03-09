@@ -16,6 +16,8 @@ const listaUsuarios = [
     'Nykolle'
 ]
 
+app.use(express.static(__dirname + '/src/assets/img'));
+
 // Query Params
 // Ex: localhost:3000/usuarios?nome=Ivens
 app.get('/usuarios', (req, res) => {
@@ -46,7 +48,7 @@ app.get('/pokemons', async (req, res) => {
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/src/views/index.html'));
-})
+});
 
 app.listen(3000, () => {
     console.log('Servidor rodando na porta 3000');
