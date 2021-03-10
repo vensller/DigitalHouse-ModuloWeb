@@ -16,7 +16,7 @@ const listaUsuarios = [
     'Nykolle'
 ]
 
-app.use(express.static(__dirname + '/src/assets/img'));
+app.use(express.static(path.join(__dirname, '/src/assets/')));
 
 // Query Params
 // Ex: localhost:3000/usuarios?nome=Ivens

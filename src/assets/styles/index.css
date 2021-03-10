@@ -1,0 +1,24 @@
+.titulo {
+    font-size: 22px;
+}
+
+header > div > img {
+    border-radius: 50%;
+    height: 64px;
+    width: 64px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dashed black;
+}
+
+header > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
