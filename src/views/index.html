@@ -19,7 +19,7 @@
         </header>
         <main>
             <div id="pesquisa">
-                <input type="text" placeholder="Seu pineco vai aqui" />
+                <input class="styled-input" type="text" placeholder="Seu pineco vai aqui" />
             </div>  
             <div class="lista">                                   
                 <div class="pokemon">
@@ -39,6 +39,39 @@
                     />
                 </div>                    
             </div>
+            <form class="form" method="POST" action="/enviar-mensagem">
+                <h2>Entre em contato conosco</h2>
+
+                <label for="name">Nome</label>
+                <input 
+                    class="styled-input" 
+                    type="text" 
+                    name="name" 
+                    id="name" 
+                    placeholder="Digite o nome aqui"
+                />
+
+                <label for="email">Email</label>
+                <input 
+                    class="styled-input" 
+                    type="email" 
+                    name="email" 
+                    id="email" 
+                    placeholder="Digite o email aqui"
+                />
+
+                <label for="comentario">Comentário</label>
+                <textarea 
+                    class="styled-input" 
+                    name="comentario" 
+                    id="comentario" 
+                    rows="6" 
+                    placeholder="Digite seu comentário aqui"
+                    maxlength="140"
+                ></textarea>
+
+                <button type="submit">Enviar mensagem</button>
+            </form>
         </main>        
         <footer>
             <span>Desenvolvido por Ivens Diego Muller</span>            

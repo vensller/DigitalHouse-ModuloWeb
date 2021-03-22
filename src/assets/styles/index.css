@@ -23,6 +23,18 @@ header > div {
     justify-content: center;
 }
 
+textarea {
+    resize: none;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+    width: 100%;
+}
+
 #pesquisa {
     display: flex;
     align-items: center;
@@ -30,10 +42,10 @@ header > div {
     margin-top: 10px;
 }
 
-#pesquisa > input {
+.styled-input {
     width: 200px; 
     border-radius: 24px; 
-    border: 1px solid #dfe1e5; 
+    border: 1px solid #c5c7cc; 
     padding: 5px 8px;
     outline: none;
 }
