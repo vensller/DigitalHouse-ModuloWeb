@@ -18,6 +18,8 @@ const listaUsuarios = [
 
 app.use(express.static(path.join(__dirname, '/src/assets/')));
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 // Query Params
 // Ex: localhost:3000/usuarios?nome=Ivens
 app.get('/usuarios', (req, res) => {
@@ -47,7 +49,13 @@ app.get('/pokemons', async (req, res) => {
 });
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '/src/views/index.html'));
+    return res.sendFile(path.join(__dirname, '/src/views/index.html'));
+});
+
+app.post('/enviar-mensagem', (req, res) => {
+    console.log(req.body);
+    
+    return res.send('OK');
 });
 
 app.listen(3000, () => {
